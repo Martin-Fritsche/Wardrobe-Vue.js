@@ -1,0 +1,14 @@
+{
+  "name": "vue-app",
+  "version": "1.0.0",
+  "description": "a vue.js app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Fritsche",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

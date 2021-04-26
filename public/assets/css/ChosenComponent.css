@@ -1,0 +1,110 @@
+.choice{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	background-color: white;
+	width: 100%;
+}
+
+.choice__close__btn{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 30px;
+	width: 30px;
+	background-color: #40a240;
+	border-radius: 3px;
+	outline: none;
+	border: 2px white solid;
+	color: white;
+	box-shadow: 0px 0px 5px #777;
+}
+
+.choice__close__btn:hover{
+	cursor: pointer;
+	background-color: green;
+}
+
+.choice__header{
+	color: #d3d3d3;
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	text-shadow: 0px 0px 1px black
+}
+
+.choice__occassion{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.choice__date{
+	position: absolute;
+	top: 70px;
+	left: 5px;
+	padding: 5px;
+	border: thin #d3d3d3 solid;
+	border-radius: 5px;
+}
+
+.choice__time{
+	position: absolute;
+	top: 105px;
+	left: 5px;
+	padding: 5px;
+	border: thin #d3d3d3 solid;
+	border-radius: 5px;
+}
+
+.choice__img__container{
+	width: 400px;
+	height: 400px;
+	border: 2px #d3d3d3 solid;
+	position: absolute;
+	top: 150px;
+	left: 50%;
+	margin-left: -201px;
+	font-size: 0;
+	box-sizing: content-box;
+}
+
+.choice__img{
+	width: 200px;
+	height: 200px;
+}
+
+.choice__input{
+	position: absolute;
+	bottom: 20%;
+	width: 90%;
+	height: 30px;
+	border-radius: 3px;
+	border: 2px #d3d3d3 solid;
+	left: 50%;
+	margin-left: -45%;
+	padding-left: 5px;
+}
+
+.choice__input:hover{
+	cursor: pointer;
+}
+
+.choice__add__btn{
+	position: absolute;
+	bottom: 10%;
+	width: 60px;
+	height: 30px;
+	background-color: #40a240;
+	border-radius: 3px;
+	border: 2px white solid;
+	color: white;
+	left: 50%;
+	margin-left: -30px;
+	box-shadow: 0px 0px 5px #777;
+}
+
+.choice__add__btn:hover{
+	cursor: pointer;
+	background-color: green;
+}

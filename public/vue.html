@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Wordrobe</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/vue.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/FormComponent.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/ChosenComponent.css">
+	<script src="https://unpkg.com/vue@next"></script>
+	<script src="https://kit.fontawesome.com/d2de794be4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="app" >
+		<section class="leftSide">
+			<h1 class="header">{{header}}</h1>
+			<image-holder article='hats' v-on:update-object="objectHandler($event)"></image-holder>
+			<image-holder article='shirts' v-on:update-object="objectHandler($event)"></image-holder>
+			<image-holder article='pants' v-on:update-object="objectHandler($event)"></image-holder>
+			<image-holder article='shoes' v-on:update-object="objectHandler($event)"></image-holder>
+			<button class="select__btn" @click="selectHandler">Select</button>
+		</section>
+		<section class="rightSide" @wardrobe-choice>
+			<div class="main__display">
+				<upload-form :style="{left: left}" @close-form="closeForm($even)"></upload-form>
+				<button class="article__form__btn" @click="uploadHandler">Upload</button>
+				<!-- the form will be tabs hats, shirts, pants, shoes; upload btn changes the class on the form modal -->
+			</div>
+			<chosen v-if="open" :date="date" :time="time" :object="choiceObject" @close-chosen="closeChoice($event)"></chosen>
+		</section>
+	</div>
+<script src="./main.js"></script>
+<script src="./Components/ImageHolderComponent.js"></script>
+<script src="./Components/ChosenComponent.js"></script>
+<script src="./Components/FormComponent.js"></script>
+<script >
+	const mountApp = app.mount('#app');
+	
+</script>
+</body>
+</html>
