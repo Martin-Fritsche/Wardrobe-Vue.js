@@ -6,6 +6,8 @@
 	transition: left .4s;
 	margin-top: 10%;
 	border-radius: 8px;
+	box-shadow: 0px 0px 5px #777;
+	z-index: 1;
 }
 
 .form__nav{
@@ -114,19 +116,20 @@
 
 .load__btn{
 	position: absolute;
-	width: 20%;
-	height: 40px;
-	outline: none;
-	border: thin #d3d3d3 solid;
-	bottom: 10px;
-	left: 50%;
-	margin-left: -10%;
-	background-color: #40a240;
-	color: white;
-	border-radius: 5px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    width: 75px;
+    height: 40px;
+    outline: none;
+    border: 2px #d3d3d3 solid;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -37.5px;
+    background-color: #40a240;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px #777;
 }
 
 .load__btn:hover{
@@ -146,13 +149,14 @@
 	width: 50%;
 	height: 40px;
 	outline: none;
-	border: thin #d3d3d3 solid;
+	border: 2px #d3d3d3 solid;
 	bottom: 10px;
 	left: 50%;
 	margin-left: -25%;
 	background-color: #40a240;
 	color: white;
 	border-radius: 5px;
+	box-shadow: 0px 0px 5px #777;
 }
 
 .form__save__btn:hover{

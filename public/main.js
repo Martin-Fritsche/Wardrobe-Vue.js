@@ -7,7 +7,9 @@ const app = Vue.createApp({
 			date:null,
 			time:null,
 			open:false,
-			left: '100%'
+			left: '100%',
+			outfit: {},
+			selection: 1
 		}
 	},
 	methods:{
@@ -29,7 +31,24 @@ const app = Vue.createApp({
 		},
 		uploadHandler(){
 			this.left = '5%';
+		},
+		backPagination(){
+			if(this.selection === 1) return;
+			this.selection--;
+			this.fetchSelection(this.selection);
+		},
+		forwardPagination(){
+			this.selection++;
+			this.fetchSelection(this.selection);
+		},
+		fetchSelection(selection){
+			fetch(`/outfit/${selection}`).then((res) => res.json()).then((data) =>{
+			data === false ? this.selection-- : this.outfit = data[0];
+			}).catch(err => console.log(err));
 		}
+	},
+	mounted(){
+		this.fetchSelection(this.selection, this.outfit);
 	}
 });
 

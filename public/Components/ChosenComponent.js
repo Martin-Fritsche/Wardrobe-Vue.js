@@ -6,7 +6,7 @@ app.component('chosen', {
 				<div class="choice__occassion">Occassion: {{value}}</div>
 				<div class="choice__date">{{date}}</div>
 				<div class="choice__time">{{time}}</div>
-				<div class="choice__img__container"><img v-for="item in object" :src="item" class='choice__img'></div>
+				<div class="choice__img__container"><img v-for="item in object" :src="item.image" class='choice__img'></div>
 				<input type="text" class="choice__input" v-model='value'>
 				<button class="choice__add__btn" @click="onAdded">Add</button>
 			</div>`,
@@ -26,7 +26,7 @@ app.component('chosen', {
 			console.log('all', this.object, this.date, this.time, this.value);
 			const values = {
 				outfit: this.object,
-				data: this.date,
+				date: this.date,
 				time: this.time,
 				value: this.value
 			}

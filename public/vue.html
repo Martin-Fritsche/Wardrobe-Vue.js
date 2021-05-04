@@ -15,16 +15,28 @@
 			<image-holder article='hats' v-on:update-object="objectHandler($event)"></image-holder>
 			<image-holder article='shirts' v-on:update-object="objectHandler($event)"></image-holder>
 			<image-holder article='pants' v-on:update-object="objectHandler($event)"></image-holder>
-			<image-holder article='shoes' v-on:update-object="objectHandler($event)"></image-holder>
+			<image-holder article='shoes' v-on:update-object="objectHandler($event)"></image-holder> 
 			<button class="select__btn" @click="selectHandler">Select</button>
 		</section>
 		<section class="rightSide" @wardrobe-choice>
+			<chosen v-if="open" :date="date" :time="time" :object="choiceObject" @close-chosen="closeChoice($event)"></chosen>
 			<div class="main__display">
 				<upload-form :style="{left: left}" @close-form="closeForm($even)"></upload-form>
+				<div class='outfit__container'>
+					<h2 class="outfit__occassion">{{outfit.occassion}}</h2>
+					<div class="outfit__image__container">
+						<img :src='outfit.hat_image' class="outfit__image">
+						<img :src='outfit.shirt_image' class="outfit__image">
+						<img :src='outfit.pants_image' class="outfit__image">
+						<img :src='outfit.shoes_image' class="outfit__image">
+					</div>
+					<p class="outfit__date">{{outfit.date}}</p>
+					<p class="outfit__time">{{outfit.time}}</p>
+				</div>
+				<button class='outfit__back__btn' @click='backPagination'>Back</button>
+				<button class='outfit__forward__btn' @click='forwardPagination'>Forward</button>
 				<button class="article__form__btn" @click="uploadHandler">Upload</button>
-				<!-- the form will be tabs hats, shirts, pants, shoes; upload btn changes the class on the form modal -->
 			</div>
-			<chosen v-if="open" :date="date" :time="time" :object="choiceObject" @close-chosen="closeChoice($event)"></chosen>
 		</section>
 	</div>
 <script src="./main.js"></script>

@@ -26,7 +26,7 @@
 }
 
 .choice__header{
-	color: #d3d3d3;
+	color: #40a240;
 	position: absolute;
 	top: 30px;
 	left: 20px;
@@ -76,7 +76,7 @@
 
 .choice__input{
 	position: absolute;
-	bottom: 20%;
+	bottom: 10%;
 	width: 90%;
 	height: 30px;
 	border-radius: 3px;
@@ -92,15 +92,15 @@
 
 .choice__add__btn{
 	position: absolute;
-	bottom: 10%;
-	width: 60px;
-	height: 30px;
+	bottom: 10px;
+	width: 75px;
+	height: 40px;
 	background-color: #40a240;
 	border-radius: 3px;
 	border: 2px white solid;
 	color: white;
 	left: 50%;
-	margin-left: -30px;
+	margin-left: -37.5px;
 	box-shadow: 0px 0px 5px #777;
 }
 

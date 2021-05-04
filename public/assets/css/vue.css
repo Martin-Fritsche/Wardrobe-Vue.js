@@ -20,16 +20,35 @@ html, body{
 	width: 60%;
 	height: 100%;
 	background-color: white;
-	border-left: thin #d3d3d3 solid;
+	border-right: thin #d3d3d3 solid;
+	padding-top: 10px;
 }
 
 .header{
+	color: #40a240;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-shadow: 0px 0px 1px black;
 }
 
 .select__btn{
 	position: absolute;
 	right: 10px;
 	bottom: 10px;
+	height: 40px;
+    width: 75px;
+    border-radius: 3px;
+    border: thin white solid;
+    box-shadow: 0px 0px 4px #777;
+    outline: none;
+    background-color: #40a240;
+    color: white;
+}
+
+.select__btn:hover{
+	background-color: green;
+	cursor: pointer;
 }
 
 .rightSide{
@@ -39,8 +58,13 @@ html, body{
 	position: relative;
 }
 
-.article__container{
+.article__wrapper{
+	position: relative;
 	height: 23%;
+}
+
+.article__container{
+	height: 100%;
 	border: thin #858585 solid;
 	position: relative;
 	overflow: hidden;
@@ -53,8 +77,8 @@ html, body{
 	position: absolute;
 	padding: 10px;
 	background-color: transparent;
-	color: black;
-	text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; 
+	color: white;
+	text-shadow: -1px -1px 0 #40a240, 1px -1px 0 #40a240, -1px 1px 0 #40a240, 1px 1px 0 #40a240; 
 	z-index: 1;
 	top: -40%;
 	transition: top .7s;
@@ -81,10 +105,16 @@ html, body{
 .left{
 	position: absolute;
 	font-size: 25px;
-	text-shadow: 0px 0px 5px white;
+	text-shadow: 0px 0px 5px #40a240;
 	left: -30px;
 	bottom: 5px;
 	transition: left .4s;
+	color: white;
+}
+
+.left:hover{
+	text-shadow: 0px 0px 5px green;
+	cursor: pointer;
 }
 
 .article__container:hover .left{
@@ -94,16 +124,41 @@ html, body{
 .right{
 	position: absolute;
 	font-size: 25px;
-	text-shadow: 0px 0px 5px white;	
+	text-shadow: 0px 0px 5px #40a240;	
 	right: -30px;
 	bottom: 5px;
 	transition: right .4s;
+	color: white;
+}
+
+.right:hover{
+	text-shadow: 0px 0px 5px green;
+	cursor: pointer;
 }
 
 .article__container:hover .right{
 	right: 5px;
 }
 
+.article__delete__btn{
+	position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 30px;
+    left: 85%;
+    height: 30px;
+    background-color: #40a240;
+	border-radius: 3px;
+	outline: none;
+	border: 2px white solid;
+	color: white;
+	box-shadow: 0px 0px 5px #777;
+}
+
+.article__delete__btn:hover{
+	background-color: green;
+	cursor: pointer;
+}
 
 
 
@@ -117,5 +172,106 @@ html, body{
 .main__display{
 	width: 100%;
 	height: 100%;
-	background-color: dodgerblue;
+	background-color: white;
+}
+
+.article__form__btn{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -30px;
+	height: 40px;
+	width: 75px;
+	background-color: #40a240;
+	border-radius: 3px;
+	outline: none;
+	border: 2px white solid;
+	color: white;
+	box-shadow: 0px 0px 5px #777;
+}
+
+.article__form__btn:hover{
+	background-color: green;
+	cursor: pointer;
+}
+
+.outfit__container{
+	padding-top: 10px;
+}
+
+.outfit__occassion{
+	color: #40a240;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 1px black;
+}
+
+.outfit__image__container{
+	width: 400px;
+	height: 400px;
+	border: thin #d3d3d3 solid;
+	box-sizing: content-box;
+	margin: 0 auto;
+	font-size: 0;
+}
+
+.outfit__image{
+	width: 200px;
+	height: 200px;
+}
+.outfit__date{
+	width: 30%;
+    padding: 5px;
+    border: thin #d3d3d3 solid;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+}
+
+.outfit__time{
+	width: 30%;
+    padding: 5px;
+    border: thin #d3d3d3 solid;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+}
+
+.outfit__back__btn{
+	position: absolute;
+	bottom: 20%;
+	left: 5%;
+	height: 40px;
+	width: 75px;
+	background-color: #40a240;
+	border-radius: 3px;
+	outline: none;
+	border: 2px white solid;
+	color: white;
+	box-shadow: 0px 0px 5px #777;
+}
+
+.outfit__back__btn:hover{
+	background-color: green;
+	cursor: pointer;
+}
+
+.outfit__forward__btn{
+	position: absolute;
+	bottom: 20%;
+	left: calc(5% + 80px);
+	height: 40px;
+	width: 75px;
+	background-color: #40a240;
+	border-radius: 3px;
+	outline: none;
+	border: 2px white solid;
+	color: white;
+	box-shadow: 0px 0px 5px #777;
+}
+
+.outfit__forward__btn:hover{
+	background-color: green;
+	cursor: pointer;
 }
